@@ -7,6 +7,8 @@ body {
     background-image: linear-gradient(darkblue, blue);
     font-family: 'Bebas Neue', sans-serif;
     /* font-family: 'Roboto Slab', serif; */
+    /* overflow: hidden; */
+
 }
 
 .main-container {
@@ -29,13 +31,13 @@ h1 {
     text-shadow: 1px 4px 8px #000;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     padding: 4vh;
 }
 
-form>textarea {
+.form>textarea {
     border-radius: 5px;
     padding: 20px;
     outline: none;
@@ -71,7 +73,24 @@ button:hover {
 input[type='checkbox']{
     color: #f9f9f9;
 }
-
+#added-list{
+    color: yellow;
+}
+i{
+    background-color: gainsboro;
+    visibility: hidden;
+    width: fit-content;
+    padding: 10px;
+    bottom:10%;
+    left: 90%;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10px;
+}
+i:hover{
+    scale: 1.1;
+    filter: brightness(1.1);
+}
 @media only screen and (max-width: 1020px) {
     .main-container {
         display: flex;
@@ -93,13 +112,13 @@ input[type='checkbox']{
         text-shadow: 1px 4px 8px #000;
     }
     
-    form {
+    .form {
         display: flex;
         flex-direction: column;
         padding: 4vh;
     }
     
-    form>textarea {
+    .form>textarea {
         border-radius: 5px;
         padding: 5px;
         outline: none;
