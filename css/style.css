@@ -7,7 +7,6 @@ body {
     background-image: linear-gradient(darkblue, blue);
     font-family: 'Bebas Neue', sans-serif;
     /* font-family: 'Roboto Slab', serif; */
-    /* overflow: hidden; */
 
 }
 
@@ -20,6 +19,10 @@ body {
     border-radius: 10px;
     background-image: linear-gradient(darkblue, #000);
     box-shadow: 2px 4px 8px 10px #00000086;
+    /* position: absolute; */
+    /* visibility: hidden; */
+    z-index: -1;
+    /* overflow: hidden; */
 }
 
 h1 {
@@ -70,27 +73,49 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
 }
-input[type='checkbox']{
+
+input[type='checkbox'] {
     color: #f9f9f9;
 }
-#added-list{
+
+#added-list {
     color: yellow;
 }
-i{
+
+i {
     background-color: gainsboro;
     visibility: hidden;
     width: fit-content;
     padding: 10px;
-    bottom:10%;
+    bottom: 10%;
     left: 90%;
     cursor: pointer;
     position: absolute;
     border-radius: 10px;
 }
-i:hover{
+
+i:hover {
     scale: 1.1;
     filter: brightness(1.1);
 }
+
+/* .list-div{
+    z-index: -1;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100vh;
+}
+.list-table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+}
+
+th{
+    padding: 10px;
+} */
+
 @media only screen and (max-width: 1020px) {
     .main-container {
         display: flex;
@@ -102,7 +127,7 @@ i:hover{
         background-image: linear-gradient(darkblue, #000);
         box-shadow: 2px 4px 8px 10px #00000086;
     }
-    
+
     h1 {
         color: #f9f9f9;
         word-spacing: 10px;
@@ -111,13 +136,13 @@ i:hover{
         position: relative;
         text-shadow: 1px 4px 8px #000;
     }
-    
+
     .form {
         display: flex;
         flex-direction: column;
         padding: 4vh;
     }
-    
+
     .form>textarea {
         border-radius: 5px;
         padding: 5px;
@@ -125,15 +150,15 @@ i:hover{
         border: none;
         margin: 25px;
     }
-    
+
     button {
         margin: 0 10px 10px;
     }
-    
+
     button:hover {
         scale: 1.1;
     }
-    
+
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
